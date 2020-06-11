@@ -1,5 +1,6 @@
 package com.chao.rabbitmq.producer.controller;
 
+import com.chao.rabbitmq.producer.model.Event;
 import com.chao.rabbitmq.producer.result.Result;
 import com.chao.rabbitmq.producer.result.ResultCode;
 import io.swagger.annotations.Api;
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.UUID;
+
 @RestController
 @RequestMapping("/rabbitmqProducer")
 @Api(value = "RabbitMQProducerController",description = "rabbitMQ生产者")
@@ -25,15 +28,37 @@ public class RabbitMQProducerController {
     @Autowired
     private AmqpTemplate template;
 
-    @ApiOperation(value = "发送信息接口",notes = "发送信息接口")
+    /**
+     * Direct 模式
+     * @param msg
+     * @return
+     */
+    @ApiOperation(value = "Direct发送MQ信息",notes = "Direct发送MQ信息")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "msg",value = "信息",required = true,dataType = "String",paramType = "query"),
     })
-    @GetMapping("/sendMQ")
-    public Result sendMQ(@RequestParam String msg){
+    @GetMapping("/directSendMQ")
+    public Result directSendMQ(@RequestParam String msg){
 
         template.convertAndSend("direct",msg);
-        logger.info("发送mq消息成功s:msg"+msg);
+        logger.info("Direct 模式发送mq消息成功:msg::"+msg);
+        return new Result(ResultCode.successCode.getCode(),ResultCode.successCode.getMsg());
+    }
+//===========================================================================================================================
+    /**
+     * topic模式
+     * @param msg
+     * @return
+     */
+    @ApiOperation(value = "Topic发送MQ信息",notes = "Topic发送MQ信息")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "msg",value = "信息",required = true,dataType = "String",paramType = "query"),
+    })
+    @GetMapping("/topicSendMQ")
+    public Result topicSendMQ(@RequestParam String msg){
+
+        template.convertAndSend("topicExchange","topic.Key",msg);
+        logger.info("topic 模式发送mq消息成功:msg::"+msg);
         return new Result(ResultCode.successCode.getCode(),ResultCode.successCode.getMsg());
     }
 }
