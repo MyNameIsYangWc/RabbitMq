@@ -44,6 +44,7 @@ public class RabbitMQProducerController {
         logger.info("Direct 模式发送mq消息成功:msg::"+msg);
         return new Result(ResultCode.successCode.getCode(),ResultCode.successCode.getMsg());
     }
+
 //===========================================================================================================================
     /**
      * topic模式
@@ -58,6 +59,24 @@ public class RabbitMQProducerController {
     public Result topicSendMQ(@RequestParam String msg){
 
         template.convertAndSend("topicExchange","topic.Key",msg);
+        logger.info("topic 模式发送mq消息成功:msg::"+msg);
+        return new Result(ResultCode.successCode.getCode(),ResultCode.successCode.getMsg());
+    }
+
+//===========================================================================================================================
+    /**
+     * fanout 模式 广播模式
+     * @param msg
+     * @return
+     */
+    @ApiOperation(value = "Fanout发送MQ信息",notes = "Fanout发送MQ信息")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "msg",value = "信息",required = true,dataType = "String",paramType = "query"),
+    })
+    @GetMapping("/FanoutSendMQ")
+    public Result FanoutSendMQ(@RequestParam String msg){
+
+        template.convertAndSend("fanoutExchange","",msg);
         logger.info("topic 模式发送mq消息成功:msg::"+msg);
         return new Result(ResultCode.successCode.getCode(),ResultCode.successCode.getMsg());
     }

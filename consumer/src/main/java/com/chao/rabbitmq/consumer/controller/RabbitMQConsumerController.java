@@ -22,7 +22,6 @@ public class RabbitMQConsumerController {
         }
         System.out.println("Receive接收消息::"+msg);
     }
-
 //=====================================================================================
 
     @ApiOperation(value = "接收topicMq消息",notes = "接收topicMq消息")
@@ -49,5 +48,30 @@ public class RabbitMQConsumerController {
             e.printStackTrace();
         }
         System.out.println("topic2接收消息::"+msg);
+    }
+//=====================================================================================
+
+    @ApiOperation(value = "接收fanoutMqA消息",notes = "接收fanoutMqA消息")
+    @ApiImplicitParams({
+    })
+    @RabbitListener(queues = "fanout.A")
+    public void processFanoutMsgA(String msg){
+        System.out.println("fanout.A接收消息::"+msg);
+    }
+
+    @ApiOperation(value = "接收fanoutMqB消息",notes = "接收fanoutMqB消息")
+    @ApiImplicitParams({
+    })
+    @RabbitListener(queues = "fanout.B")
+    public void processFanoutMsgB(String msg){
+        System.out.println("fanout.B接收消息::"+msg);
+    }
+
+    @ApiOperation(value = "接收fanoutMqC消息",notes = "接收fanoutMqC消息")
+    @ApiImplicitParams({
+    })
+    @RabbitListener(queues = "fanout.C")
+    public void processFanoutMsgC(String msg){
+        System.out.println("fanout.C接收消息::"+msg);
     }
 }

@@ -39,8 +39,35 @@ public class RabbitMQConfig {
     public Queue topicQueue2(){
         return new Queue("topic2");
     }
+//================================================================================================================
+
+    /**
+     * fanout 模式 广播形式
+     * @return
+     */
+    @Bean(name="fanoutA")
+    public Queue fanoutA() {
+        return new Queue("fanout.A");
+    }
+
+    /**
+     * fanout 模式 广播形式 用例2
+     * @return
+     */
+    @Bean(name="fanoutB")
+    public Queue fanoutB() {
+        return new Queue("fanout.B");
+    }
 
 
+    /**
+     * fanout 模式 广播形式 用例3
+     * @return
+     */
+    @Bean(name="fanoutC")
+    public Queue fanoutC() {
+        return new Queue("fanout.C");
+    }
 
 
 }
