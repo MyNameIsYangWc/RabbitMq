@@ -33,7 +33,7 @@ public class RabbitMQProducerController {
     public Result sendMQ(@RequestParam String msg){
 
         template.convertAndSend("direct",msg);
-        logger.info("发送mq消息成功:msg"+msg);
+        logger.info("发送mq消息成功s:msg"+msg);
         return new Result(ResultCode.successCode.getCode(),ResultCode.successCode.getMsg());
     }
 }
