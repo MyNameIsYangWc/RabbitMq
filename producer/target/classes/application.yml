@@ -1,0 +1,21 @@
+server:
+  port: 5001
+
+spring:
+  application:
+    name: rabbitmq-producer
+#  rabbitmq配置
+  rabbitmq:
+    username: user
+    password: password
+    host: 129.211.113.218
+    port: 5672
+eureka:
+  instance:
+    prefer-ip-address: true
+    status-page-url: http://localhost:${server.port}/swagger-ui.html
+  leaseRenewalIntervalInSeconds: 10
+  client:
+    fetch-registry: true
+    registerWithEureka: true
+    serviceUrl.defaultZone: http://localhost:5000/eureka/

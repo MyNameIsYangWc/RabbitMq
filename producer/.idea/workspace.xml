@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ed8dc174-fe17-4963-a8c0-f2805feb3d00" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\repo" />
+        <option name="mavenHome" value="D:/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1dAvqo4BR4ibTgYIHrcXS5tPR4r" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../consumer" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="consumer" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="consumer" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RabbitApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="producer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chao.rabbitmq.producer.RabbitApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed8dc174-fe17-4963-a8c0-f2805feb3d00" name="Default Changelist" comment="" />
+      <created>1591880905426</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591880905426</updated>
+      <workItem from="1591880906622" duration="30000" />
+      <workItem from="1591880969875" duration="62000" />
+      <workItem from="1591881044863" duration="72000" />
+      <workItem from="1591881123337" duration="2540000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1591881180048">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591881180048" />
+    <state width="1493" height="286" key="GridCell.Tab.0.bottom" timestamp="1591882737894">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="286" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591882737894" />
+    <state width="1493" height="286" key="GridCell.Tab.0.center" timestamp="1591882737894">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="286" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591882737894" />
+    <state width="1493" height="286" key="GridCell.Tab.0.left" timestamp="1591882737893">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="286" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591882737893" />
+    <state width="1493" height="286" key="GridCell.Tab.0.right" timestamp="1591882737894">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="286" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591882737894" />
+    <state width="1493" height="272" key="GridCell.Tab.1.bottom" timestamp="1591882737755">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="272" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591882737755" />
+    <state width="1493" height="272" key="GridCell.Tab.1.center" timestamp="1591882737755">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="272" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1591882737755" />
+    <state width="1493" height="272" key="GridCell.Tab.1.left" timestamp="1591882737755">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="272" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1591882737755" />
+    <state width="1493" height="272" key="GridCell.Tab.1.right" timestamp="1591882737755">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="272" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1591882737755" />
+    <state width="1493" height="286" key="GridCell.Tab.2.bottom" timestamp="1591882737738">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="286" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591882737738" />
+    <state width="1493" height="286" key="GridCell.Tab.2.center" timestamp="1591882737738">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="286" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1591882737738" />
+    <state width="1493" height="286" key="GridCell.Tab.2.left" timestamp="1591882737738">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="286" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1591882737738" />
+    <state width="1493" height="286" key="GridCell.Tab.2.right" timestamp="1591882737738">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="286" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1591882737738" />
+    <state x="270" y="57" key="SettingsEditor" timestamp="1591881155063">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591881155063" />
+  </component>
+</project>
