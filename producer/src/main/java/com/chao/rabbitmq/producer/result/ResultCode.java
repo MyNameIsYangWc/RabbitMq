@@ -1,5 +1,10 @@
 package com.chao.rabbitmq.producer.result;
 
+/**
+ * 反参码值定义
+ * @author 杨文超
+ * @Date 2020-06-12
+ */
 public enum ResultCode {
 
     successCode(200,"成功"),

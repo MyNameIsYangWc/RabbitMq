@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**
  * 异常统一处理类
+ * @author 杨文超
+ * @Date 2020-06-12
  */
 @RestControllerAdvice
 public class DomainExceptionHandler {
@@ -22,14 +24,17 @@ public class DomainExceptionHandler {
     /**
      * 应用到所有@RequestMapping注解方法，在其执行之前初始化数据绑定器
      * @param binder
+     * @author 杨文超
+     * @Date 2020-06-12
      */
     @InitBinder
-    public void initBinder(WebDataBinder binder){
-    }
+    public void initBinder(WebDataBinder binder){}
 
     /**
      * 把值绑定到Model中，使全局@RequestMapping可以获取到该值
      * @param model
+     * @author 杨文超
+     * @Date 2020-06-12
      */
     @ModelAttribute
     public void addAttributes(Model model) {
@@ -39,7 +44,8 @@ public class DomainExceptionHandler {
     /**
      * 全局异常捕捉处理
      * @param e
-     * @return
+     * @author 杨文超
+     * @Date 2020-06-12
      */
     @ExceptionHandler(Exception.class)
     public Result errorHandler(Exception e) {

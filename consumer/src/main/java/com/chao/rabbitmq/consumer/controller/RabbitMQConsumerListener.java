@@ -5,8 +5,11 @@
 //import org.springframework.amqp.rabbit.annotation.RabbitListener;
 //import org.springframework.stereotype.Component;
 //
+///**
+// * 无消息确认的队列监听
+// */
 //@Component
-//public class RabbitMQConsumerController {
+//public class RabbitMQConsumerListener {
 //
 ////=====================================================================================
 //

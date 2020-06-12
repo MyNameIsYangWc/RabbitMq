@@ -1,5 +1,10 @@
 package com.chao.rabbitmq.producer.result;
 
+/**
+ * 反参封装
+ * @author 杨文超
+ * @Date 2020-06-12
+ */
 public class Result {
 
     private int code;

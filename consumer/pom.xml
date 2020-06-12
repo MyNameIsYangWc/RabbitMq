@@ -63,11 +63,12 @@
         <dependency>
             <groupId>org.springframework.amqp</groupId>
             <artifactId>spring-rabbit</artifactId>
-            <version>2.1.4.RELEASE</version>
+            <version>1.7.7.RELEASE</version>
         </dependency>
         <dependency>
-            <groupId>org.springframework.retry</groupId>
-            <artifactId>spring-retry</artifactId>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.58.sec06</version>
         </dependency>
     </dependencies>
     <build>

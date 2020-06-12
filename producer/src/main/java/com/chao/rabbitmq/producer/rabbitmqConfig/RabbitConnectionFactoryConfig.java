@@ -7,11 +7,17 @@ import org.springframework.amqp.rabbit.support.CorrelationData;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * mq发送消息连接工厂初始化,开启消息确认
+ * @author 杨文超
+ * @Date 2020-06-12
+ */
 @Configuration
 public class RabbitConnectionFactoryConfig {
 
     @Bean(name = "rabbit")
     public RabbitTemplate createRabbitTemplate(ConnectionFactory connectionFactory) {
+
         RabbitTemplate rabbitTemplate = new RabbitTemplate();
         rabbitTemplate.setConnectionFactory(connectionFactory);
         //设置开启Mandatory,才能触发回调函数,无论消息推送结果怎么样都强制调用回调函数

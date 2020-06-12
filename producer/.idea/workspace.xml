@@ -20,13 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed8dc174-fe17-4963-a8c0-f2805feb3d00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../consumer/src/main/java/com/chao/rabbitmq/consumer/controller/RabbitMQConsumerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../consumer/src/main/java/com/chao/rabbitmq/consumer/controller/RabbitMQConsumerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../consumer/src/main/java/com/chao/rabbitmq/consumer/rabbitmqConfig/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../consumer/src/main/java/com/chao/rabbitmq/consumer/rabbitmqConfig/RabbitMQConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../consumer/.idea/libraries/Maven__com_alibaba_fastjson_1_2_58_sec06.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../consumer/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../consumer/consumer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/message/MessageVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../consumer/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_1_7_14_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../consumer/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_1_7_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../consumer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../consumer/src/main/java/com/chao/rabbitmq/consumer/controller/RabbitMQConsumerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../consumer/src/main/java/com/chao/rabbitmq/consumer/controller/RabbitMQConsumerListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../consumer/src/main/java/com/chao/rabbitmq/consumer/controller/RabbitMqAskConsumerListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../consumer/src/main/java/com/chao/rabbitmq/consumer/controller/RabbitMqAskConsumerListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../consumer/src/main/java/com/chao/rabbitmq/consumer/message/MyAckReceiver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../consumer/src/main/java/com/chao/rabbitmq/consumer/rabbitmqConfig/RabbitMessageListenerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../consumer/src/main/java/com/chao/rabbitmq/consumer/rabbitmqConfig/RabbitMessageListenerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../consumer/target/classes/META-INF/consumer.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/controller/RabbitMQProducerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/controller/RabbitMQProducerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/rabbitmqConfig/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/rabbitmqConfig/RabbitMQConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/exception/DomainExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/exception/DomainExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/model/Event.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/rabbitmqConfig/RabbitConnectionFactoryConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/rabbitmqConfig/RabbitConnectionFactoryConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/rabbitmqConfig/RabbitMqQueueExchangeConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/rabbitmqConfig/RabbitMqQueueExchangeConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/result/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/result/ResultCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/result/ResultCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/swagger/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/swagger/Swagger2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/chao/rabbitmq/producer/controller/RabbitMQProducerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chao/rabbitmq/producer/controller/RabbitMQProducerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/chao/rabbitmq/producer/rabbitmqConfig/RabbitMQConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/chao/rabbitmq/producer/rabbitmqConfig/RabbitMQConfig.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,12 +68,16 @@
     </option>
   </component>
   <component name="ProjectId" id="1dAvqo4BR4ibTgYIHrcXS5tPR4r" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelOrder2" value="2" />
@@ -78,7 +97,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.RabbitProducerApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="consumer" />
       <option name="VM_PARAMETERS" />
@@ -133,6 +152,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RabbitProducerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="producer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chao.rabbitmq.producer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chao.rabbitmq.producer.RabbitProducerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.RabbitProducerApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -167,63 +204,70 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1591884756668">
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1591977923564">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1591884756668" />
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1591977923564" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1591881180048">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591881180048" />
-    <state width="1493" height="272" key="GridCell.Tab.0.bottom" timestamp="1591889265301">
+    <state width="1493" height="360" key="GridCell.Tab.0.bottom" timestamp="1591980335994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="272" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591889265301" />
-    <state width="1493" height="272" key="GridCell.Tab.0.center" timestamp="1591889265301">
+    <state width="1493" height="360" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591980335994" />
+    <state width="1493" height="360" key="GridCell.Tab.0.center" timestamp="1591980335994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="272" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591889265301" />
-    <state width="1493" height="272" key="GridCell.Tab.0.left" timestamp="1591889265301">
+    <state width="1493" height="360" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591980335994" />
+    <state width="1493" height="360" key="GridCell.Tab.0.left" timestamp="1591980335994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="272" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591889265301" />
-    <state width="1493" height="272" key="GridCell.Tab.0.right" timestamp="1591889265301">
+    <state width="1493" height="360" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591980335994" />
+    <state width="1493" height="360" key="GridCell.Tab.0.right" timestamp="1591980335994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="272" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591889265301" />
-    <state width="1493" height="272" key="GridCell.Tab.1.bottom" timestamp="1591889265301">
+    <state width="1493" height="360" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591980335994" />
+    <state width="1493" height="360" key="GridCell.Tab.1.bottom" timestamp="1591980335994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="272" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591889265301" />
-    <state width="1493" height="272" key="GridCell.Tab.1.center" timestamp="1591889265301">
+    <state width="1493" height="360" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591980335994" />
+    <state width="1493" height="360" key="GridCell.Tab.1.center" timestamp="1591980335994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="272" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1591889265301" />
-    <state width="1493" height="272" key="GridCell.Tab.1.left" timestamp="1591889265301">
+    <state width="1493" height="360" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1591980335994" />
+    <state width="1493" height="360" key="GridCell.Tab.1.left" timestamp="1591980335994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="272" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1591889265301" />
-    <state width="1493" height="272" key="GridCell.Tab.1.right" timestamp="1591889265301">
+    <state width="1493" height="360" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1591980335994" />
+    <state width="1493" height="360" key="GridCell.Tab.1.right" timestamp="1591980335994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="272" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1591889265301" />
-    <state width="1493" height="505" key="GridCell.Tab.2.bottom" timestamp="1591889169950">
+    <state width="1493" height="360" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1591980335994" />
+    <state width="1493" height="360" key="GridCell.Tab.2.bottom" timestamp="1591980335994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="505" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591889169950" />
-    <state width="1493" height="505" key="GridCell.Tab.2.center" timestamp="1591889169949">
+    <state width="1493" height="360" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591980335994" />
+    <state width="1493" height="360" key="GridCell.Tab.2.center" timestamp="1591980335994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="505" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1591889169949" />
-    <state width="1493" height="505" key="GridCell.Tab.2.left" timestamp="1591889169949">
+    <state width="1493" height="360" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1591980335994" />
+    <state width="1493" height="360" key="GridCell.Tab.2.left" timestamp="1591980335994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="505" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1591889169949" />
-    <state width="1493" height="505" key="GridCell.Tab.2.right" timestamp="1591889169949">
+    <state width="1493" height="360" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1591980335994" />
+    <state width="1493" height="360" key="GridCell.Tab.2.right" timestamp="1591980335994">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="505" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1591889169949" />
+    <state width="1493" height="360" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1591980335994" />
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1591979114348">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1591979114348" />
     <state x="270" y="57" key="SettingsEditor" timestamp="1591881155063">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

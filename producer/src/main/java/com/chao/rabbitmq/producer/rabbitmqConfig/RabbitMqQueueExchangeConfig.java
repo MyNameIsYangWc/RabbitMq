@@ -5,12 +5,18 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * 初始化:队列,交换机,与routingKey
+ * @author 杨文超
+ * @Date 2020-06-12
+ */
 @Configuration
 public class RabbitMqQueueExchangeConfig {
 //================================================================================================================
     /**
      * direct 模式
-     * @return
+     * @author 杨文超
+     * @Date 2020-06-12
      */
     @Bean
     public Queue directQueue() {
@@ -25,7 +31,8 @@ public class RabbitMqQueueExchangeConfig {
 
     /**
      * topic 模式 需要绑定交换机
-     * @return
+     * @author 杨文超
+     * @Date 2020-06-12
      */
     @Bean(name = "topic")
     public Queue topicQueue(){
@@ -34,7 +41,8 @@ public class RabbitMqQueueExchangeConfig {
 
     /**
      * topic 交换机
-     * @return
+     * @author 杨文超
+     * @Date 2020-06-12
      */
     @Bean
     public TopicExchange exchange() {
@@ -45,7 +53,8 @@ public class RabbitMqQueueExchangeConfig {
      * topic绑定到交换机
      * @param topicQueue
      * @param exchange
-     * @return
+     * @author 杨文超
+     * @Date 2020-06-12
      */
     @Bean
     Binding bindingExchangeTopic(@Qualifier("topic") Queue topicQueue, TopicExchange exchange){
@@ -54,7 +63,8 @@ public class RabbitMqQueueExchangeConfig {
 
     /**
      * topic 模式 用例2
-     * @return
+     * @author 杨文超
+     * @Date 2020-06-12
      */
     @Bean(name = "topic2")
     public Queue topicQueue2(){
@@ -66,7 +76,8 @@ public class RabbitMqQueueExchangeConfig {
      * topic绑定到交换机 用例2
      * @param topicQueue
      * @param exchange
-     * @return
+     * @author 杨文超
+     * @Date 2020-06-12
      */
     @Bean
     Binding bindingExchangeTopic2(@Qualifier("topic2") Queue topicQueue, TopicExchange exchange){
@@ -76,7 +87,8 @@ public class RabbitMqQueueExchangeConfig {
 
     /**
      * fanout 模式 广播形式
-     * @return
+     * @author 杨文超
+     * @Date 2020-06-12
      */
     @Bean(name="fanoutA")
     public Queue fanoutA() {
@@ -85,7 +97,8 @@ public class RabbitMqQueueExchangeConfig {
 
     /**
      * fanout 模式 广播形式 用例2
-     * @return
+     * @author 杨文超
+     * @Date 2020-06-12
      */
     @Bean(name="fanoutB")
     public Queue fanoutB() {
@@ -95,7 +108,8 @@ public class RabbitMqQueueExchangeConfig {
 
     /**
      * fanout 模式 广播形式 用例3
-     * @return
+     * @author 杨文超
+     * @Date 2020-06-12
      */
     @Bean(name="fanoutC")
     public Queue fanoutC() {

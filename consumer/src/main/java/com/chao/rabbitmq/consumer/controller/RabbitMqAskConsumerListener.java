@@ -1,10 +1,13 @@
 package com.chao.rabbitmq.consumer.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.rabbitmq.client.Channel;
 import org.springframework.amqp.core.Message;
-import org.springframework.amqp.rabbit.listener.api.ChannelAwareMessageListener;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.amqp.rabbit.core.ChannelAwareMessageListener;
 import org.springframework.stereotype.Component;
 import java.util.HashMap;import java.util.Map;
+import java.util.Queue;
 
 
 /**
@@ -12,10 +15,15 @@ import java.util.HashMap;import java.util.Map;
  */
 @Component
 public class RabbitMqAskConsumerListener implements ChannelAwareMessageListener {
+
+    @RabbitListener(queues = "direct")
     @Override
     public void onMessage(Message message, Channel channel) throws Exception {
         long deliveryTag = message.getMessageProperties().getDeliveryTag();
         try {
+            byte[] body = message.getBody();
+            String s = JSON.toJSONString(body);
+
             //因为传递消息的时候用的map传递,所以将Map从Message内取出需要做些处理
             String msg = message.toString();
             String[] msgArray = msg.split("'");
