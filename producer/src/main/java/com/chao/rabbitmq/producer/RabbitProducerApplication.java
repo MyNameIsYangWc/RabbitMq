@@ -6,10 +6,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class RabbitApplication {
+public class RabbitProducerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(RabbitApplication.class,args);
-        System.out.println("RabbitMQ启动成功！！！");
+        SpringApplication.run(RabbitProducerApplication.class,args);
+        System.out.println("RabbitMqProducer启动成功！！！");
     }
 }
