@@ -1,16 +1,17 @@
-//package com.chao.rabbitmq.consumer.controller;
-//
-//import io.swagger.annotations.ApiImplicitParams;
-//import io.swagger.annotations.ApiOperation;
-//import org.springframework.amqp.rabbit.annotation.RabbitListener;
-//import org.springframework.stereotype.Component;
-//
-///**
-// * 无消息确认的队列监听
-// */
-//@Component
-//public class RabbitMQConsumerListener {
-//
+package com.chao.rabbitmq.consumer.controller;
+
+import io.swagger.annotations.ApiOperation;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.stereotype.Component;
+
+/**
+ * 无消息确认的队列监听(配置文件开启手动应答模式 此类监听消息不会确认,造成消息积压,故注释掉)
+ * @author 杨文超
+ * @date 2020-6-13
+ */
+@Component
+public class RabbitMQConsumerListener {
+
 ////=====================================================================================
 //
 //    /**
@@ -18,8 +19,6 @@
 //     * @param msg
 //     */
 //    @ApiOperation(value = "接收DirectMq消息",notes = "接收DirectMq消息")
-//    @ApiImplicitParams({
-//    })
 //    @RabbitListener(queues = "direct")
 //    public void processMsg( String msg){
 //        try {
@@ -32,8 +31,6 @@
 //    }
 //
 //    @ApiOperation(value = "接收DirectMq消息",notes = "接收DirectMq消息")
-//    @ApiImplicitParams({
-//    })
 //    @RabbitListener(queues = "direct")
 //    public void processMsg1( String msg){
 //        try {
@@ -46,8 +43,6 @@
 ////=====================================================================================
 //
 //    @ApiOperation(value = "接收topicMq消息",notes = "接收topicMq消息")
-//    @ApiImplicitParams({
-//    })
 //    @RabbitListener(queues = "topic")
 //    public void processTopicMsg(String msg){
 //        try {
@@ -59,8 +54,6 @@
 //    }
 //
 //    @ApiOperation(value = "接收topicMq2消息",notes = "接收topicMq2消息")
-//    @ApiImplicitParams({
-//    })
 //    @RabbitListener(queues = "topic2")
 //    public void processTopicMsg2(String msg){
 //        try {
@@ -73,26 +66,20 @@
 ////=====================================================================================
 //
 //    @ApiOperation(value = "接收fanoutMqA消息",notes = "接收fanoutMqA消息")
-//    @ApiImplicitParams({
-//    })
 //    @RabbitListener(queues = "fanout.A")
 //    public void processFanoutMsgA(String msg){
 //        System.out.println("fanout.A接收消息::"+msg);
 //    }
 //
 //    @ApiOperation(value = "接收fanoutMqB消息",notes = "接收fanoutMqB消息")
-//    @ApiImplicitParams({
-//    })
 //    @RabbitListener(queues = "fanout.B")
 //    public void processFanoutMsgB(String msg){
 //        System.out.println("fanout.B接收消息::"+msg);
 //    }
 //
 //    @ApiOperation(value = "接收fanoutMqC消息",notes = "接收fanoutMqC消息")
-//    @ApiImplicitParams({
-//    })
 //    @RabbitListener(queues = "fanout.C")
 //    public void processFanoutMsgC(String msg){
 //        System.out.println("fanout.C接收消息::"+msg);
 //    }
-//}
+}
