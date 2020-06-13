@@ -2,6 +2,7 @@ server:
   port: 5002
 
 spring:
+  mongodb:
   application:
     name: rabbitmq-consumer
   #  rabbitmq配置
@@ -23,7 +24,16 @@ spring:
     template:
       reply-timeout: 6000
       receive-timeout: 6000
-
+  #redis配置
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+    timeout: 1000
+  #mongoDb
+  data:
+    mongodb:
+      uri: "mongodb://localhost:27017/rabbitmq"
 
 eureka:
   instance:

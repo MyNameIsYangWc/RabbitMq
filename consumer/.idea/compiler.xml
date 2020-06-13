@@ -9,8 +9,5 @@
         <module name="consumer" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="consumer" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
