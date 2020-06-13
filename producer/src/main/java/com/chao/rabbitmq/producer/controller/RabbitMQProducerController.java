@@ -13,11 +13,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
@@ -40,6 +41,8 @@ public class RabbitMQProducerController {
     @Autowired
     private MessageVo messageVo;
 
+    private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
     /**
      * Direct 模式 使用默认交换机
      * @param msg
@@ -50,12 +53,12 @@ public class RabbitMQProducerController {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "msg",value = "信息",required = true,dataType = "Object",paramType = "body"),
     })
-    @GetMapping("/directSendMQ")
-    public Result directSendMQ(@RequestParam Object msg){
+    @PostMapping("/directSendMQ")
+    public Result directSendMQ(@RequestBody Object msg){
 
-        messageVo.setId(String.valueOf(UUID.randomUUID()));
+        messageVo.setId(String.valueOf(UUID.randomUUID()).replaceAll("-",""));
         messageVo.setData(msg);
-        messageVo.setDate(new Date());
+        messageVo.setDate(sdf.format(new Date()));
 
         template.convertAndSend("direct", JSON.toJSONString(messageVo));
         logger.info("Direct 模式发送mq消息成功:messageVo::"+JSON.toJSONString(messageVo));
@@ -73,12 +76,12 @@ public class RabbitMQProducerController {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "msg",value = "信息",required = true,dataType = "Object",paramType = "body"),
     })
-    @GetMapping("/topicSendMQ")
-    public Result topicSendMQ(@RequestParam String msg){
+    @PostMapping("/topicSendMQ")
+    public Result topicSendMQ(@RequestBody Object msg){
 
         messageVo.setId(String.valueOf(UUID.randomUUID()));
         messageVo.setData(msg);
-        messageVo.setDate(new Date());
+        messageVo.setDate(sdf.format(new Date()));
 
         template.convertAndSend("topicExchange","topic.Key",JSON.toJSONString(msg));
         logger.info("topic 模式发送mq消息成功:msg::"+JSON.toJSONString(msg));
@@ -96,12 +99,12 @@ public class RabbitMQProducerController {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "msg",value = "信息",required = true,dataType = "Object",paramType = "body"),
     })
-    @GetMapping("/FanoutSendMQ")
-    public Result FanoutSendMQ(@RequestParam String msg){
+    @PostMapping("/FanoutSendMQ")
+    public Result FanoutSendMQ(@RequestBody Object msg){
 
         messageVo.setId(String.valueOf(UUID.randomUUID()));
         messageVo.setData(msg);
-        messageVo.setDate(new Date());
+        messageVo.setDate(sdf.format(new Date()));
 
         template.convertAndSend("fanoutExchange","",JSON.toJSONString(msg));
         logger.info("topic 模式发送mq消息成功:msg::"+JSON.toJSONString(msg));

@@ -2,8 +2,6 @@ package com.chao.rabbitmq.producer.message;
 
 import org.springframework.stereotype.Component;
 
-import java.util.Date;
-
 /**
  * mq消息体
  * @param <T>
@@ -15,14 +13,24 @@ public class MessageVo<T>{
 
     private String id; //消息id uuid生成 唯一标识
     private T data;     //发送数据
-    private Date date;  //发送时间
+    private String crateDate;  //发送时间
+    private boolean flag = false; //是否重入队列
 
     public MessageVo(){}
 
-    public MessageVo(String id, T data, Date date) {
+    public MessageVo(String id, T data, String crateDate,boolean flag) {
         this.id = id;
         this.data = data;
-        this.date = date;
+        this.crateDate = crateDate;
+        this.flag=false;
+    }
+
+    public boolean isFlag() {
+        return flag;
+    }
+
+    public void setFlag(boolean flag) {
+        this.flag = flag;
     }
 
     public String getId() {
@@ -41,12 +49,12 @@ public class MessageVo<T>{
         this.data = data;
     }
 
-    public Date getDate() {
-        return date;
+    public String getDate() {
+        return crateDate;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDate(String crateDate) {
+        this.crateDate = crateDate;
     }
 
     @Override
@@ -54,7 +62,7 @@ public class MessageVo<T>{
         return "MessageVo{" +
                 "id='" + id + '\'' +
                 ", data=" + data +
-                ", date=" + date +
+                ", date=" + crateDate +
                 '}';
     }
 }
