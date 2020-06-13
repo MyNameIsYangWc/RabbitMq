@@ -58,7 +58,7 @@ public class RabbitMQProducerController {
 
         messageVo.setId(String.valueOf(UUID.randomUUID()).replaceAll("-",""));
         messageVo.setData(msg);
-        messageVo.setDate(sdf.format(new Date()));
+        messageVo.setCrateDate(sdf.format(new Date()));
 
         template.convertAndSend("direct", JSON.toJSONString(messageVo));
         logger.info("Direct 模式发送mq消息成功:messageVo::"+JSON.toJSONString(messageVo));
@@ -81,10 +81,10 @@ public class RabbitMQProducerController {
 
         messageVo.setId(String.valueOf(UUID.randomUUID()));
         messageVo.setData(msg);
-        messageVo.setDate(sdf.format(new Date()));
+        messageVo.setCrateDate(sdf.format(new Date()));
 
-        template.convertAndSend("topicExchange","topic.Key",JSON.toJSONString(msg));
-        logger.info("topic 模式发送mq消息成功:msg::"+JSON.toJSONString(msg));
+        template.convertAndSend("topicExchange","topic.Key",JSON.toJSONString(messageVo));
+        logger.info("topic 模式发送mq消息成功:msg::"+JSON.toJSONString(messageVo));
         return new Result(ResultCode.successCode.getCode(),ResultCode.successCode.getMsg());
     }
 
@@ -104,10 +104,10 @@ public class RabbitMQProducerController {
 
         messageVo.setId(String.valueOf(UUID.randomUUID()));
         messageVo.setData(msg);
-        messageVo.setDate(sdf.format(new Date()));
+        messageVo.setCrateDate(sdf.format(new Date()));
 
-        template.convertAndSend("fanoutExchange","",JSON.toJSONString(msg));
-        logger.info("topic 模式发送mq消息成功:msg::"+JSON.toJSONString(msg));
+        template.convertAndSend("fanoutExchange","",JSON.toJSONString(messageVo));
+        logger.info("Fanout 模式发送mq消息成功:msg::"+JSON.toJSONString(messageVo));
         return new Result(ResultCode.successCode.getCode(),ResultCode.successCode.getMsg());
     }
 }

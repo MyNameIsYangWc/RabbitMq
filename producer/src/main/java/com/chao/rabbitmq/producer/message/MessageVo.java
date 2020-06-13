@@ -9,28 +9,19 @@ import org.springframework.stereotype.Component;
  * @date 2020-06-12
  */
 @Component
-public class MessageVo<T>{
+public class MessageVo<T> {
 
     private String id; //消息id uuid生成 唯一标识
     private T data;     //发送数据
     private String crateDate;  //发送时间
-    private boolean flag = false; //是否重入队列
 
-    public MessageVo(){}
+    public MessageVo() {
+    }
 
-    public MessageVo(String id, T data, String crateDate,boolean flag) {
+    public MessageVo(String id, T data, String crateDate) {
         this.id = id;
         this.data = data;
         this.crateDate = crateDate;
-        this.flag=false;
-    }
-
-    public boolean isFlag() {
-        return flag;
-    }
-
-    public void setFlag(boolean flag) {
-        this.flag = flag;
     }
 
     public String getId() {
@@ -49,11 +40,11 @@ public class MessageVo<T>{
         this.data = data;
     }
 
-    public String getDate() {
+    public String getCrateDate() {
         return crateDate;
     }
 
-    public void setDate(String crateDate) {
+    public void setCrateDate(String crateDate) {
         this.crateDate = crateDate;
     }
 
@@ -62,7 +53,7 @@ public class MessageVo<T>{
         return "MessageVo{" +
                 "id='" + id + '\'' +
                 ", data=" + data +
-                ", date=" + crateDate +
+                ", crateDate='" + crateDate + '\'' +
                 '}';
     }
 }
