@@ -26,19 +26,19 @@ spring:
       receive-timeout: 6000
   #redis配置
   redis:
-    host: localhost
+    host: 129.211.113.218
     port: 6379
     database: 0
     timeout: 1000
   #mongoDb
   data:
     mongodb:
-      uri: "mongodb://localhost:27017/rabbitmq"
+      uri: "mongodb://129.211.113.218:27017/rabbitmq"
 
 eureka:
   instance:
     prefer-ip-address: true
-    status-page-url: http://localhost:${server.port}/swagger-ui.html
+    status-page-url: http://129.211.113.218:${server.port}/swagger-ui.html
   leaseRenewalIntervalInSeconds: 10
   client:
     fetch-registry: true
