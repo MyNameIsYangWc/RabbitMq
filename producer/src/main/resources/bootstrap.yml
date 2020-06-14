@@ -4,8 +4,8 @@ spring:
   cloud:
     config:
       # 配置中心的具体地址
-      uri: http://localhost:6000/
+      uri: http://49.232.0.86:6000/
       # 对应{application}部分
       name: rabbitmq-producer
       # 对应{profile}部分
-      profile: dev
+      profile: test
