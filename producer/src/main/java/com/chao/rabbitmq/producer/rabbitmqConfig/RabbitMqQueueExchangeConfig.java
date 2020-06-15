@@ -135,4 +135,45 @@ public class RabbitMqQueueExchangeConfig {
     Binding bindingExchangeC(@Qualifier("fanoutC") Queue fanoutC, FanoutExchange fanoutExchange) {
         return BindingBuilder.bind(fanoutC).to(fanoutExchange);
     }
+
+    /**
+     * * TTL消息队列配置
+     * *     * @return
+     * */
+    @Bean
+    Queue messageTtlQueue() {
+        return QueueBuilder
+                .durable("ttl")
+                 // 配置到期后转发的交换
+                 .withArgument("x-dead-letter-exchange","topicExchange")
+                // 配置到期后转发的路由键
+                .withArgument("x-dead-letter-routing-key","topic.Key")
+                 .build();
+    }
+
+    /**
+     * @author 杨文超
+     * @Date 2020-06-12
+     */
+    @Bean
+    DirectExchange  ttlexchange() {
+        return (DirectExchange) ExchangeBuilder
+                .directExchange("ttlexchange")
+                .durable(true)
+                .build();
+    }
+
+    /**
+     * ttl队列和ttl交换机的绑定-routekey
+     * @param messageTtlQueue
+     * @param messageTtlDirect
+     * @return
+     */
+    @Bean
+    public Binding messageTtlBinding(Queue messageTtlQueue, DirectExchange messageTtlDirect) {
+        return BindingBuilder
+                .bind(messageTtlQueue)
+                .to(messageTtlDirect)
+                .with("ttlKey");
+    }
 }
