@@ -1,6 +1,7 @@
 package com.chao.rabbitmq.producer.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.chao.rabbitmq.producer.Enum.ConfigEnum;
 import com.chao.rabbitmq.producer.message.MessageVo;
 import com.chao.rabbitmq.producer.result.Result;
 import com.chao.rabbitmq.producer.result.ResultCode;
@@ -59,9 +60,9 @@ public class RabbitMqDelayController {
         messageVo.setData(msg);
         messageVo.setCrateDate(sdf.format(new Date()));
 
-        template.convertAndSend("ttlexchange","ttlKey", JSON.toJSONString(messageVo), message->{
+        template.convertAndSend(ConfigEnum.Delay.getExchange(),ConfigEnum.Delay.getRoutingKey(), JSON.toJSONString(messageVo), message->{
             //设置消息体延时时间
-            message.getMessageProperties().setExpiration(String.valueOf(6*1000));
+            message.getMessageProperties().setExpiration(String.valueOf(ConfigEnum.Delay.getDelayTime()));
             return message;
         });
         logger.info("Fanout 模式发送mq消息成功:msg::"+JSON.toJSONString(messageVo));

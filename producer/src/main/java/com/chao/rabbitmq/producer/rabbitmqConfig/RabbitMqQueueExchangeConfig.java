@@ -1,5 +1,6 @@
 package com.chao.rabbitmq.producer.rabbitmqConfig;
 
+import com.chao.rabbitmq.producer.Enum.ConfigEnum;
 import org.springframework.amqp.core.*;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -12,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class RabbitMqQueueExchangeConfig {
-//================================================================================================================
+
     /**
      * direct 模式
      * @author 杨文超
@@ -25,18 +26,18 @@ public class RabbitMqQueueExchangeConfig {
         // autoDelete:是否自动删除，当没有生产者或者消费者使用此队列，该队列会自动删除。
         // 一般设置一下队列的持久化就好,其余两个就是默认false
         //   return new Queue("TestDirectQueue",true,true,false);
-        return new Queue("direct");
+        return new Queue(ConfigEnum.Direct.getRoutingKey());
     }
 //================================================================================================================
 
     /**
-     * topic 模式 需要绑定交换机
+     * topic队列 需要绑定交换机
      * @author 杨文超
      * @Date 2020-06-12
      */
     @Bean(name = "topic")
     public Queue topicQueue(){
-        return new Queue("topic");
+        return new Queue(ConfigEnum.Topic1.getQueue());
     }
 
     /**
@@ -46,7 +47,7 @@ public class RabbitMqQueueExchangeConfig {
      */
     @Bean
     public TopicExchange exchange() {
-        return new TopicExchange("topicExchange");
+        return new TopicExchange(ConfigEnum.Topic1.getExchange());
     }
 
     /**
@@ -58,7 +59,7 @@ public class RabbitMqQueueExchangeConfig {
      */
     @Bean
     Binding bindingExchangeTopic(@Qualifier("topic") Queue topicQueue, TopicExchange exchange){
-        return BindingBuilder.bind(topicQueue).to(exchange).with("topic.Key");
+        return BindingBuilder.bind(topicQueue).to(exchange).with(ConfigEnum.Topic1.getRoutingKey());
     }
 
     /**
@@ -68,7 +69,7 @@ public class RabbitMqQueueExchangeConfig {
      */
     @Bean(name = "topic2")
     public Queue topicQueue2(){
-        return new Queue("topic2");
+        return new Queue(ConfigEnum.Topic2.getQueue());
     }
 
 
@@ -81,7 +82,8 @@ public class RabbitMqQueueExchangeConfig {
      */
     @Bean
     Binding bindingExchangeTopic2(@Qualifier("topic2") Queue topicQueue, TopicExchange exchange){
-        return BindingBuilder.bind(topicQueue).to(exchange).with("topic.#");//*表示一个词,#表示零个或多个词
+        //*表示一个词,#表示零个或多个词
+        return BindingBuilder.bind(topicQueue).to(exchange).with(ConfigEnum.Topic2.getRoutingKey());
     }
 //================================================================================================================
 
@@ -92,7 +94,7 @@ public class RabbitMqQueueExchangeConfig {
      */
     @Bean(name="fanoutA")
     public Queue fanoutA() {
-        return new Queue("fanout.A");
+        return new Queue(ConfigEnum.FanoutA.getQueue());
     }
 
     /**
@@ -102,7 +104,7 @@ public class RabbitMqQueueExchangeConfig {
      */
     @Bean(name="fanoutB")
     public Queue fanoutB() {
-        return new Queue("fanout.B");
+        return new Queue(ConfigEnum.FanoutB.getQueue());
     }
 
 
@@ -113,14 +115,24 @@ public class RabbitMqQueueExchangeConfig {
      */
     @Bean(name="fanoutC")
     public Queue fanoutC() {
-        return new Queue("fanout.C");
+        return new Queue(ConfigEnum.FanoutC.getQueue());
     }
 
+    /**
+     * 配置广播交换机
+     * @author 杨文超
+     * @Date 2020-06-12
+     */
     @Bean
     FanoutExchange fanoutExchange() {
-        return new FanoutExchange("fanoutExchange");//配置广播路由器
+        return new FanoutExchange(ConfigEnum.FanoutA.getExchange());
     }
 
+    /**
+     * 配置广播交换机与队列绑定
+     * @author 杨文超
+     * @Date 2020-06-12
+     */
     @Bean
     Binding bindingExchangeA(@Qualifier("fanoutA") Queue fanoutA,FanoutExchange fanoutExchange) {
         return BindingBuilder.bind(fanoutA).to(fanoutExchange);
@@ -136,35 +148,38 @@ public class RabbitMqQueueExchangeConfig {
         return BindingBuilder.bind(fanoutC).to(fanoutExchange);
     }
 
+//================================================================================================================
     /**
-     * * TTL消息队列配置
-     * *     * @return
-     * */
+     * 延时消息队列配置
+     * @author 杨文超
+     * @Date 2020-06-15
+     */
     @Bean
     Queue messageTtlQueue() {
         return QueueBuilder
-                .durable("ttl")
-                 // 配置到期后转发的交换
-                 .withArgument("x-dead-letter-exchange","topicExchange")
+                .durable(ConfigEnum.Delay.getQueue())
+                 // 配置到期后转发的交换机
+                .withArgument("x-dead-letter-exchange",ConfigEnum.Topic2.getExchange())
                 // 配置到期后转发的路由键
-                .withArgument("x-dead-letter-routing-key","topic.Key")
-                 .build();
+                .withArgument("x-dead-letter-routing-key","topic.2")
+                .build();
     }
 
     /**
+     * 延时消息交换机配置
      * @author 杨文超
-     * @Date 2020-06-12
+     * @Date 2020-06-15
      */
     @Bean
     DirectExchange  ttlexchange() {
         return (DirectExchange) ExchangeBuilder
-                .directExchange("ttlexchange")
+                .directExchange(ConfigEnum.Delay.getExchange())
                 .durable(true)
                 .build();
     }
 
     /**
-     * ttl队列和ttl交换机的绑定-routekey
+     * 延时队列和延时交换机的绑定-routekey
      * @param messageTtlQueue
      * @param messageTtlDirect
      * @return
@@ -174,6 +189,6 @@ public class RabbitMqQueueExchangeConfig {
         return BindingBuilder
                 .bind(messageTtlQueue)
                 .to(messageTtlDirect)
-                .with("ttlKey");
+                .with(ConfigEnum.Delay.getRoutingKey());
     }
 }

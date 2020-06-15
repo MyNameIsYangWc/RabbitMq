@@ -1,6 +1,7 @@
 package com.chao.rabbitmq.producer.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.chao.rabbitmq.producer.Enum.ConfigEnum;
 import com.chao.rabbitmq.producer.message.MessageVo;
 import com.chao.rabbitmq.producer.result.Result;
 import com.chao.rabbitmq.producer.result.ResultCode;
@@ -59,7 +60,7 @@ public class RabbitMQDirectController {
         messageVo.setData(msg);
         messageVo.setCrateDate(sdf.format(new Date()));
 
-        template.convertAndSend("direct", JSON.toJSONString(messageVo));
+        template.convertAndSend(ConfigEnum.Direct.getRoutingKey(), JSON.toJSONString(messageVo));
         logger.info("Direct 模式发送mq消息成功:messageVo::"+JSON.toJSONString(messageVo));
         return new Result(ResultCode.successCode.getCode(),ResultCode.successCode.getMsg());
     }
