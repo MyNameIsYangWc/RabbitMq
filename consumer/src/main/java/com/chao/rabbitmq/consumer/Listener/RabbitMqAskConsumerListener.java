@@ -1,4 +1,4 @@
-package com.chao.rabbitmq.consumer.controller;
+package com.chao.rabbitmq.consumer.Listener;
 
 import com.alibaba.fastjson.JSONObject;
 import com.chao.rabbitmq.consumer.message.MessageVo;

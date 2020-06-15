@@ -1,7 +1,5 @@
-package com.chao.rabbitmq.consumer.controller;
+package com.chao.rabbitmq.consumer.Listener;
 
-import io.swagger.annotations.ApiOperation;
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 /**

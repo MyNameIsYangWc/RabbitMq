@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5174a33-3581-440a-b65d-2a3e9605ac8a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../consumer/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../consumer/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../consumer/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../consumer/src/main/java/com/chao/rabbitmq/consumer/Listener/ConsumerContainerFailedEventListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../consumer/src/main/java/com/chao/rabbitmq/consumer/config/MQClientMonitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../consumer/src/main/java/com/chao/rabbitmq/consumer/controller/MQManageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../consumer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../consumer/src/main/java/com/chao/rabbitmq/consumer/controller/RabbitMQConsumerListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../consumer/src/main/java/com/chao/rabbitmq/consumer/Listener/RabbitMQConsumerListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../consumer/src/main/java/com/chao/rabbitmq/consumer/controller/RabbitMqAskConsumerListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/../consumer/src/main/java/com/chao/rabbitmq/consumer/Listener/RabbitMqAskConsumerListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../consumer/src/main/java/com/chao/rabbitmq/consumer/swagger/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../consumer/src/main/java/com/chao/rabbitmq/consumer/swagger/Swagger2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/controller/RabbitMqFanoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/controller/RabbitMqFanoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/rabbitmqConfig/RabbitMqQueueExchangeConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/rabbitmqConfig/RabbitMqQueueExchangeConfig.java" afterDir="false" />
     </list>
     <list id="ad329863-95ee-4092-a240-9f4e1c7ce082" name="Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -45,19 +50,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/rabbitmqConfig/RabbitMqQueueExchangeConfig.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/bootstrap.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="159" column="10" lean-forward="true" selection-start-line="159" selection-start-column="10" selection-end-line="159" selection-end-column="10" />
+            <state relative-caret-position="75">
+              <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/rabbitmqConfig/RabbitConnectionFactoryConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/rabbitmqConfig/RabbitMqQueueExchangeConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="534">
+              <caret line="164" column="25" lean-forward="true" selection-start-line="164" selection-start-column="25" selection-end-line="164" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/controller/RabbitMqFanoutController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
-              <caret line="32" column="67" lean-forward="true" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
+              <caret line="32" column="65" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -71,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/controller/RabbitMqDelayController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1075">
-              <caret line="64" column="94" selection-start-line="64" selection-start-column="94" selection-end-line="64" selection-end-column="94" />
+            <state relative-caret-position="225">
+              <caret line="51" column="56" lean-forward="true" selection-start-line="51" selection-start-column="3" selection-end-line="51" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -107,13 +130,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/RabbitProducerApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/controller/RabbitMQProducerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/controller/RabbitMQDirectController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/controller/RabbitMqDelayController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/controller/RabbitMqTopicController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/Enum/ConfigEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/rabbitmqConfig/RabbitConnectionFactoryConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/rabbitmqConfig/RabbitMqQueueExchangeConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/bootstrap.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/controller/RabbitMqFanoutController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/controller/RabbitMqDelayController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/rabbitmqConfig/RabbitMqQueueExchangeConfig.java" />
       </list>
     </option>
   </component>
@@ -211,15 +234,6 @@
               <item name="producer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="producer" type="462c0819:PsiDirectoryNode" />
-              <item name="rabbitmqConfig" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="producer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="producer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -237,7 +251,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592231248503" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592234245275" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../consumer" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -322,11 +336,18 @@
       <option name="project" value="LOCAL" />
       <updated>1592229383915</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="消息体延时发送">
+      <created>1592231316885</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1592231316885</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31451000" />
+    <option name="totallyTimeSpent" value="33519000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -341,7 +362,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15817694" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22587131" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -352,7 +373,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49798927" weight="0.62181306" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932975" weight="0.7832861" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932975" weight="0.64164305" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
@@ -452,13 +473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/rabbitmqConfig/RabbitConnectionFactoryConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/Enum/ConfigEnum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="393">
@@ -486,13 +500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/RabbitProducerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -503,13 +510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/rabbitmqConfig/RabbitMqQueueExchangeConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="159" column="10" lean-forward="true" selection-start-line="159" selection-start-column="10" selection-end-line="159" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/controller/RabbitMQDirectController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -517,17 +517,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/controller/RabbitMqDelayController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1075">
-          <caret line="64" column="94" selection-start-line="64" selection-start-column="94" selection-end-line="64" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/controller/RabbitMqFanoutController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
-          <caret line="32" column="67" lean-forward="true" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
+          <caret line="32" column="65" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/rabbitmqConfig/RabbitMqQueueExchangeConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="164" column="25" lean-forward="true" selection-start-line="164" selection-start-column="25" selection-end-line="164" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/rabbitmqConfig/RabbitConnectionFactoryConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chao/rabbitmq/producer/controller/RabbitMqDelayController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="51" column="56" lean-forward="true" selection-start-line="51" selection-start-column="3" selection-end-line="51" selection-end-column="56" />
         </state>
       </provider>
     </entry>
