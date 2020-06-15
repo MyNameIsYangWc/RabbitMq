@@ -30,7 +30,7 @@ import java.util.UUID;
  */
 @RestController
 @RequestMapping("/rabbitmqFanoutProducer")
-@Api(value = "RabbitMqFanoutController",description = "rabbitMQ发送消息")
+@Api(value = "RabbitMqFanoutController",description = "Fanout发送消息")
 public class RabbitMqFanoutController {
 
     private Logger logger= LoggerFactory.getLogger(this.getClass());

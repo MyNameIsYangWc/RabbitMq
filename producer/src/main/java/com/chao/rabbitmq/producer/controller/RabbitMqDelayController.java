@@ -65,7 +65,7 @@ public class RabbitMqDelayController {
             message.getMessageProperties().setExpiration(String.valueOf(ConfigEnum.Delay.getDelayTime()));
             return message;
         });
-        logger.info("Fanout 模式发送mq消息成功:msg::"+JSON.toJSONString(messageVo));
+        logger.info("Delay 模式发送mq消息成功:msg::"+JSON.toJSONString(messageVo));
         return new Result(ResultCode.successCode.getCode(),ResultCode.successCode.getMsg());
     }
 }
