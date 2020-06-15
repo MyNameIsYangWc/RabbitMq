@@ -37,7 +37,7 @@ public class RabbitMqAskConsumerListener implements ChannelAwareMessageListener 
      * @param channel
      * @throws Exception
      */
-    @RabbitListener(queues = {"direct","topic","topic2","fanout.A","fanout.B","fanout.C"})
+    @RabbitListener(queues = {"directQueue","topicQueue","topicQueue2","fanoutQueue.A","fanoutQueue.B","fanoutQueue.C"})
     @Override
     public void onMessage(Message message, Channel channel) throws Exception {
         long deliveryTag = message.getMessageProperties().getDeliveryTag();
