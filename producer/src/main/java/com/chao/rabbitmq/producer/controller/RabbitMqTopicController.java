@@ -53,6 +53,8 @@ public class RabbitMqTopicController {
     @ApiOperation(value = "Topic发送MQ信息",notes = "Topic发送MQ信息")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "msg",value = "信息",required = true,dataType = "Object",paramType = "body"),
+
+            @ApiImplicitParam(name = "Accept",value = "",required = false,dataType = "String",paramType = "header",defaultValue = "application/json")
     })
     @PostMapping("/topicSendMQ")
     public Result topicSendMQ(@RequestBody Object msg){

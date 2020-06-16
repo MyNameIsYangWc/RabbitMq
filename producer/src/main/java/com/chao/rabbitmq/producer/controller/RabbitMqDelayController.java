@@ -52,6 +52,8 @@ public class RabbitMqDelayController {
     @ApiOperation(value = "延时发送MQ信息",notes = "延时发送MQ信息")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "msg",value = "信息",required = true,dataType = "Object",paramType = "body"),
+
+            @ApiImplicitParam(name = "Accept",value = "",required = false,dataType = "String",paramType = "header",defaultValue = "application/json")
     })
     @PostMapping("/delaySendMQ")
     public Result delaySendMQ(@RequestBody Object msg){

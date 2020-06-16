@@ -52,6 +52,8 @@ public class RabbitMQDirectController {
     @ApiOperation(value = "Direct发送MQ信息",notes = "Direct发送MQ信息")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "msg",value = "信息",required = true,dataType = "Object",paramType = "body"),
+
+            @ApiImplicitParam(name = "Accept",value = "",required = false,dataType = "String",paramType = "header",defaultValue = "application/json")
     })
     @PostMapping("/directSendMQ")
     public Result directSendMQ(@RequestBody Object msg){
