@@ -83,6 +83,7 @@ public class RabbitMqAskConsumerListener implements ChannelAwareMessageListener 
 
     //处理业务逻辑
     public void handleBusiness(MessageVo messageVo){
+        mongoTemplate.save(messageVo.getData());
         logger.info(String.format("业务逻辑处理"));
     }
 }
