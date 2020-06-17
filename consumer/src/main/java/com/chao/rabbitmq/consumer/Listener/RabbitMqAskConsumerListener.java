@@ -13,6 +13,8 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
+import java.util.HashMap;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -83,7 +85,7 @@ public class RabbitMqAskConsumerListener implements ChannelAwareMessageListener 
 
     //处理业务逻辑
     public void handleBusiness(MessageVo messageVo){
-        mongoTemplate.save(messageVo.getData());
+        redisTemplate.opsForValue().set("BusinessData:"+messageVo.getCrateDate(),messageVo.getData(),1,TimeUnit.DAYS);
         logger.info(String.format("业务逻辑处理"));
     }
 }
